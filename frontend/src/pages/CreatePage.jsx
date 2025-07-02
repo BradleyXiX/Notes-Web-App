@@ -30,7 +30,15 @@ const CreatePage = () => {
       navigate("/")
     } catch (error) {
       console.log("error creating note", error);
-      toast.error("Failed to Create Note")
+      if(error.response.status === 429){
+        toast.error("Slow down! You're creating notes to fast", {
+          duration: 4000,
+          icon: "💀"
+        })
+      } else {
+        toast.error("Failed to Create Note");
+      }
+      
     } finally {
       setLoading(false)
     }
@@ -75,7 +83,7 @@ const CreatePage = () => {
                 </div>
 
                 <div className="card-actions justify-end">
-                  <button type="submit" className="btn btn-primary disabled={loading}">
+                  <button type="submit" className="btn btn-primary" disabled={loading}>
                     {loading ? "Creating..." : "Create Note"}
                   </button>
                 </div>
