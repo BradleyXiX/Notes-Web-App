@@ -1,0 +1,22 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000N\u0000o\u0000t\u0000e\u0000s\u0000-\u0000W\u0000e\u0000b\u0000-\u0000A\u0000p\u0000p\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BradleyXiX/Notes-Web-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/BradleyXiX/Notes-Web-App/issues"
+  },
+  "homepage": "https://github.com/BradleyXiX/Notes-Web-App#readme"
+}
